@@ -9,8 +9,12 @@
     "resources": {
         "media": []
     },
-    "sdkVersion": "2",
+    "sdkVersion": "3",
     "shortName": "SoundBoard",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
     "uuid": "2672088b-e280-4aed-8e1a-6e556b5b3921",
     "versionCode": 1,
     "versionLabel": "1.0",
