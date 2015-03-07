@@ -7,6 +7,8 @@
 static Window *s_main_window;
 static SimpleMenuLayer *s_simple_menu_layer;
 
+    
+
 static SimpleMenuSection sections[NUM_MENU_SECTIONS];
 static SimpleMenuItem menu_items[NUM_MENU_ITEMS];
 
@@ -66,6 +68,11 @@ static void init() {
         .unload = main_window_unload
     });
 
+    #ifdef PBL_COLOR
+        window_set_background_color(s_main_window, GColorLightGray);
+    #else
+        window_set_background_color(s_main_window, GColorWhite);
+    #endif
     // Show the Window on the watch, with animated=true
     window_stack_push(s_main_window, true);
 }
