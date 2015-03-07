@@ -40,7 +40,8 @@ static void main_window_load(Window *window) {
         sections[i].title = "Menu 1";
     }
     APP_LOG(APP_LOG_LEVEL_DEBUG , "Create the menu layer");
-    s_simple_menu_layer = simple_menu_layer_create(GRect(0, 55, 144, 50),
+    s_simple_menu_layer = simple_menu_layer_create(
+                            layer_get_frame(window_get_root_layer(window)),
                             s_main_window,
                             sections,
                             NUM_MENU_SECTIONS,
